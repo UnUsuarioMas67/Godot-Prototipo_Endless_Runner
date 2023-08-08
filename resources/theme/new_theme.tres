@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dwfgxyqn3mmju"]
+
+[ext_resource type="FontFile" uid="uid://cihp8y5eokaqy" path="res://assets/font/Kubasta.ttf" id="1_5egme"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rvd1q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_asft2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5cwdg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_utegh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pacrs"]
+
+[resource]
+default_font = ExtResource("1_5egme")
+default_font_size = 16
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0.94902, 0.94902, 0.584314, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_rvd1q")
+Button/styles/focus = SubResource("StyleBoxEmpty_asft2")
+Button/styles/hover = SubResource("StyleBoxEmpty_5cwdg")
+Button/styles/normal = SubResource("StyleBoxEmpty_utegh")
+Button/styles/pressed = SubResource("StyleBoxEmpty_pacrs")

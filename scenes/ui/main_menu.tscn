@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvqdsnm4efi6x"]
+
+[ext_resource type="PackedScene" uid="uid://b8ohafloxbdp" path="res://scenes/platform/platform.tscn" id="1_1kjtv"]
+[ext_resource type="Script" path="res://scenes/ui/main_menu.gd" id="1_v4e3g"]
+[ext_resource type="Texture2D" uid="uid://b0ntjd25mvl43" path="res://scenes/player/player_0.png" id="3_sj74q"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_v4e3g")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.529412, 0.807843, 0.921569, 1)
+
+[node name="Options" type="CanvasLayer" parent="."]
+
+[node name="OptionsContainer" type="MarginContainer" parent="Options"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = -50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/OptionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Options/OptionsContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Don't run out of money"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/OptionsContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="Options/OptionsContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PLAY"
+
+[node name="ExitButton" type="Button" parent="Options/OptionsContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "EXIT"
+
+[node name="MenuPlatform" parent="." instance=ExtResource("1_1kjtv")]
+position = Vector2(-18, 180)
+layer_0/tile_data = PackedInt32Array(-131048, 196609, 1, -65512, 196609, 6, 24, 196609, 7, -131049, 131073, 1, -65513, 131073, 6, 23, 131073, 7, -131050, 131073, 1, -65514, 131073, 6, 22, 131073, 7, -131051, 131073, 1, -65515, 131073, 6, 21, 131073, 7, -131052, 131073, 1, -65516, 131073, 6, 20, 131073, 7, -131053, 131073, 1, -65517, 131073, 6, 19, 131073, 7, -131054, 131073, 1, -65518, 131073, 6, 18, 131073, 7, -131055, 131073, 1, -65519, 131073, 6, 17, 131073, 7, -131056, 131073, 1, -65520, 131073, 6, 16, 131073, 7, -131057, 131073, 1, -65521, 131073, 6, 15, 131073, 7, -131058, 131073, 1, -65522, 131073, 6, 14, 131073, 7, -131059, 131073, 1, -65523, 131073, 6, 13, 131073, 7, -131060, 131073, 1, -65524, 131073, 6, 12, 131073, 7, -131061, 131073, 1, -65525, 131073, 6, 11, 131073, 7, -131062, 131073, 1, -65526, 131073, 6, 10, 131073, 7, -131063, 131073, 1, -65527, 131073, 6, 9, 131073, 7, -131064, 131073, 1, -65528, 131073, 6, 8, 131073, 7, -131065, 131073, 1, -65529, 131073, 6, 7, 131073, 7, -131066, 131073, 1, -65530, 131073, 6, 6, 131073, 7, -131067, 131073, 1, -65531, 131073, 6, 5, 131073, 7, -131068, 131073, 1, -65532, 131073, 6, 4, 131073, 7, -131069, 131073, 1, -65533, 131073, 6, 3, 131073, 7, -131070, 131073, 1, -65534, 131073, 6, 2, 131073, 7, -131071, 131073, 1, -65535, 131073, 6, 1, 131073, 7, -131072, 65537, 1, -65536, 65537, 6, 0, 65537, 7)
+script = null
+
+[node name="Player0" type="Sprite2D" parent="."]
+position = Vector2(45, 132)
+texture = ExtResource("3_sj74q")
+flip_h = true
+
+[editable path="MenuPlatform"]

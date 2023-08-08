@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8ohafloxbdp"]
+
+[ext_resource type="TileSet" uid="uid://bmu3xbjqesebs" path="res://resources/tileset/ground.tres" id="1_lioph"]
+[ext_resource type="Script" path="res://scenes/platform/platform.gd" id="2_xy5jr"]
+
+[node name="Platform" type="TileMap"]
+tile_set = ExtResource("1_lioph")
+cell_quadrant_size = 18
+format = 2
+layer_0/tile_data = PackedInt32Array(-65535, 196609, 1, 1, 196609, 7, -65536, 65537, 1, 0, 65537, 7)
+script = ExtResource("2_xy5jr")
